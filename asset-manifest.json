@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/allainclair/static/css/main.5f361e03.chunk.css",
+    "main.js": "/allainclair/static/js/main.3d84a0b3.chunk.js",
+    "main.js.map": "/allainclair/static/js/main.3d84a0b3.chunk.js.map",
+    "runtime-main.js": "/allainclair/static/js/runtime-main.22a2f4a5.js",
+    "runtime-main.js.map": "/allainclair/static/js/runtime-main.22a2f4a5.js.map",
+    "static/js/2.239ac21d.chunk.js": "/allainclair/static/js/2.239ac21d.chunk.js",
+    "static/js/2.239ac21d.chunk.js.map": "/allainclair/static/js/2.239ac21d.chunk.js.map",
+    "index.html": "/allainclair/index.html",
+    "precache-manifest.0782e5295f6fc1bd03a16a86bf49cfff.js": "/allainclair/precache-manifest.0782e5295f6fc1bd03a16a86bf49cfff.js",
+    "service-worker.js": "/allainclair/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/allainclair/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.239ac21d.chunk.js.LICENSE.txt": "/allainclair/static/js/2.239ac21d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/allainclair/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22a2f4a5.js",
+    "static/js/2.239ac21d.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.3d84a0b3.chunk.js"
+  ]
+}
