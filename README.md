@@ -1,13 +1,14 @@
-- Real state project [rs1.allainclair.com](http://rs1.allainclair.com) (pt-BR)
-- Hi, I’m @allainclair
+Hi, I’m @allainclair
+- This is a current Real State project of my city (Maringá, PR, Brazil) [rs1.allainclair.com](http://rs1.allainclair.com) (pt-BR)
 - I’m interested in Software Engineering, Data Science, Optimization, and Python <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code>.
-- I’m currently learning Systems Design/Architecture.
+- I’m currently studying systems design and architecture, HTMX, and [Litestar](https://github.com/litestar-org/litestar).
 - I’m looking to collaborate on Python projects.
-- 📫 How to reach me: allainclair@gmail.com
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=allainclair&layout=compact&theme=tokyonight)
 
 ![Allainclair's GitHub stats](https://github-readme-stats.vercel.app/api?username=allainclair&show_icons=true&theme=tokyonight)
+
+📫 How to reach me: allainclair@gmail.com
 
 <!---
 allainclair/allainclair is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
