@@ -1,6 +1,6 @@
 Hi, I’m @allainclair
-- This is a current Real State project of my city (Maringá, PR, Brazil) [rs1.allainclair.com](http://rs1.allainclair.com) (pt-BR)
-- I’m interested in Software Engineering, Data Science, Optimization, and Python <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code>.
+- This is a current Real State project of my city (Maringá, PR, Brazil) [rs1.allainclair.com](http://rs1.allainclair.com) (pt-BR).
+- I’m interested in Software Engineering, Data Science, Optimization, and Python.
 - I’m currently studying systems design and architecture, HTMX, and [Litestar](https://github.com/litestar-org/litestar).
 - I’m looking to collaborate on Python projects.
 
