@@ -65,6 +65,6 @@ ENTRYPOINT ["uvicorn", "--host", "0.0.0.0", "app.main:app", "--reload"]
 
 
 FROM base-run AS prod
-COPY .env .env
-EXPOSE 8000
-ENTRYPOINT ["uvicorn", "--host", "0.0.0.0", "--port", "8000", "app.main:app"]
+#COPY .env .env
+EXPOSE 8001
+ENTRYPOINT ["uvicorn", "--host", "0.0.0.0", "--port", "8001", "app.main:app"]

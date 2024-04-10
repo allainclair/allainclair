@@ -14,11 +14,29 @@ async def get_index() -> Template:
 	# Check if it is sync or async.
 	return HTMXTemplate(template_name="index.html")
 
+
+@get(path="/education")
+async def get_education() -> Template:
+	return HTMXTemplate(template_name="education.html.jinja2")
+
+
+@get(path="/professional-experience")
+async def get_professional_experience() -> Template:
+	return HTMXTemplate(template_name="professional-experience.html.jinja2")
+
+
+@get(path="/projects")
+async def get_projects() -> Template:
+	return HTMXTemplate(template_name="projects.html.jinja2")
+
+
 app = Litestar(
 	route_handlers=[
 		get_index,
+		get_education,
+		get_professional_experience,
+		get_projects,
 		create_static_files_router(path="/images", directories=["app/images"]),
-		create_static_files_router(path="/js", directories=["app/js"]),
 	],
 	debug=True,
 	request_class=HTMXRequest,

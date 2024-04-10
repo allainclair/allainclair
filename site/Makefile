@@ -1,9 +1,9 @@
-include .env
+# include .env
 
 TAG_LINT := webapp-lint
 TAG_LINT_TESTS := webapp-lint-tests
 TAG_TESTS := webapp-tests
-TAG_WEBAPP_PROD := webapp-prod
+TAG_WEBAPP_PROD := webapp-allainclair-prod
 
 docker-lint-build:
 	docker build \
@@ -38,6 +38,6 @@ docker-prod-run: docker-prod-build
 	docker stop $(TAG_WEBAPP_PROD) || true
 	docker rm $(TAG_WEBAPP_PROD) || true
 	docker run --name $(TAG_WEBAPP_PROD) \
- 		--rm --detach  -p 8000:8000 \
+ 		--rm --detach  -p 8001:8001 \
 		-v ${DATA_DIR_HOST_PROD}:${DATA_DIR_DOCKER} \
 		$(TAG_WEBAPP_PROD)
