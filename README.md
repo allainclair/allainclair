@@ -21,7 +21,9 @@ Some techs that I know:
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=allainclair&layout=compact&theme=tokyonight)
 
+<!--
 ![Allainclair's GitHub stats](https://github-readme-stats.vercel.app/api?username=allainclair&show_icons=true&theme=tokyonight)
+-->
 
 📫 How to reach me: allainclair@gmail.com
 
