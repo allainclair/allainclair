@@ -1,0 +1,19 @@
+# Compiled Python bytecode
+*.py[cod]
+
+# JetBrains IDE
+.idea/
+
+.pdm-python
+pdm.lock
+
+Webapp.egg-info/
+
+.venv
+.env
+
+# Test coverage
+.coverage
+htmlcov
+
+allainclair_website.egg-info
