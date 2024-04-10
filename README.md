@@ -1,4 +1,4 @@
-Hi, I’m @allainclair, a software engineer from Brazil <img src="https://cdn-icons-png.flaticon.com/512/3909/3909370.png" width="14"/> with about nine years of experience.
+Hi, I’m Allainclair, a software engineer from Brazil <img src="https://cdn-icons-png.flaticon.com/512/3909/3909370.png" width="14"/> with about nine years of experience.
 - Most of my experience is in backend web apps, but I can make some front-ends, too.
 - This is a current Real State project of my city (Maringá, PR, Brazil) [rs1.allainclair.com](http://rs1.allainclair.com) (pt-BR).
 - I’m interested in Software Engineering, Data Science, Optimization, and Python.
