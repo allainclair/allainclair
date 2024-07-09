@@ -16,7 +16,7 @@ RUN apt-get update \
       && rm install-pdm.py \
       && apt-get remove -y curl && apt-get autoremove -y
 
-COPY ${BASE_DIR}/pyproject.toml .
+COPY pyproject.toml .
 
 
 FROM base AS base-tests

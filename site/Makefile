@@ -38,6 +38,6 @@ docker-prod-run: docker-prod-build
 	docker stop $(TAG_WEBAPP_PROD) || true
 	docker rm $(TAG_WEBAPP_PROD) || true
 	docker run --name $(TAG_WEBAPP_PROD) \
- 		--rm --detach  -p 8001:8001 \
+		--rm --detach  -p 8001:8001 \
 		-v ${DATA_DIR_HOST_PROD}:${DATA_DIR_DOCKER} \
 		$(TAG_WEBAPP_PROD)
