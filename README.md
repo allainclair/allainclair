@@ -3,7 +3,7 @@ Hi, I’m Allainclair, a software engineer from Brazil <img src="https://cdn-ico
 - My website is [allainclair.com](http://allainclair.com)
 - This is a current Real State project of my city (Maringá, PR, Brazil) [rs1.allainclair.com](http://rs1.allainclair.com) (pt-BR).
 - I’m interested in Software Engineering, Data Science, Optimization, and Python.
-- I’m currently studying systems design and architecture, HTMX, and [Litestar](https://github.com/litestar-org/litestar).
+- I’m currently studying systems design and architecture, HTMX, and [FastHTML](https://fastht.ml).
 - I’m looking to collaborate on Python projects.
 
 Some techs that I know:
