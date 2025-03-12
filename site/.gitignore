@@ -1,6 +1,8 @@
 # Compiled Python bytecode
 *.py[cod]
 
+*.DS_Store
+
 # JetBrains IDE
 .idea/
 

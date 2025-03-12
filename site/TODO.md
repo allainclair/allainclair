@@ -1,3 +1,5 @@
+* Add a Single sentence for each card and an accordion for more details.
+  * There is no accordion component in Monster UI. Maybe use a HTMX GET to it.
 * Do a top nav for
   * Home
   * Projects

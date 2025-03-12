@@ -1,0 +1,81 @@
+.experience-card-telnyx{
+    position: relative;
+    overflow: hidden;
+    background-image: url('telnyx.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-blend-mode:darken;/* Blends with background */
+}
+
+.experience-card-necc {
+    position: relative;
+    overflow: hidden;
+    background-image: url('necc.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 40%;
+    background-blend-mode:multiply;/* Blends with background */
+}
+
+.experience-card-martian {
+    position: relative;
+    overflow: hidden;
+    background-image: url('martian.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
+    background-blend-mode:darken;/* Blends with background */
+}
+
+.experience-card-shipwell{
+    position: relative;
+    overflow: hidden;
+    background-image: url('shipwell.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 60%;
+    background-blend-mode:darken;/* Blends with background */
+}
+
+.experience-card-pinterest{
+    position: relative;
+    overflow: hidden;
+    background-image: url('pinterest.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 30%;
+    background-blend-mode:multiply;/* Blends with background */
+}
+
+.experience-card-bairesdev{
+    position: relative;
+    overflow: hidden;
+    background-image: url('bairesdev.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
+    background-blend-mode:multiply;/* Blends with background */
+}
+
+.experience-card-uem{
+    position: relative;
+    overflow: hidden;
+    background-image: url('uem.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
+    background-blend-mode:multiply;/* Blends with background */
+}
+
+.experience-card-seebot{
+    position: relative;
+    overflow: hidden;
+    background-image: url('seebot.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-blend-mode:overlay;/* Blends with background */
+}
+
+/*.accordion-card{*/
+/*    margin-top: 0;*/
+/*}*/

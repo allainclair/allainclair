@@ -1,0 +1,118 @@
+[project]
+name = "allainclair-website"
+version = "0.0.1"
+description = "Allainclair Website: allainclair.com"
+authors = [
+	{name = "Allainclair Flausino dos Santos", email = "allainclair@gmail.com"},
+]
+
+requires-python = ">=3.12.3"
+readme = "README.md"
+license = {text = "MIT"}
+
+dependencies = [
+    "uvicorn>=0.24.0.post1",
+    "pydantic-settings>=2.0.3",
+    "litestar[jinja]>=2.3.2",
+]
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=7.4.3",
+    "pytest-asyncio>=0.21.1",
+    "coverage>=7.4.1",
+]
+lint = [
+    "ruff>=0.1.4",
+    "mypy>=1.6.1",
+]
+debug = [
+	"rich>=13.7.0",
+	"ipython>=8.22.1",
+	"pytest-watcher>=0.3.5",
+]
+
+
+[tool.pdm.scripts]
+dev = "uvicorn --host 0.0.0.0 app.main:app --reload"
+
+cov-run = {cmd = ["coverage", "run", "--branch", "--source=app", "-m", "pytest", "-vvss", "tests"]}
+cov-term = {cmd = ["coverage", "report", "-m", "--fail-under=90"]}
+cov-html = {cmd = ["coverage", "html", "--fail-under=90"]}
+cov = {composite = ["cov-run", "cov-term"]}  # run coverage and report with terminal output
+cov-run-html = {composite = ["cov-run", "cov-html"]}  # run coverage and report with html output
+
+mypy-strict = {cmd = ["mypy", "--strict", "."]}
+ruff-dot = {cmd = ["ruff", "check", "."]}
+ruff-format = {cmd = ["ruff", "format"]}
+ruff-fix = {cmd = ["ruff", "check", ".", "--fix"]}
+ruff-all = {composite = ["ruff-dot", "ruff-format"]}
+
+lint = {composite = ["ruff-all", "mypy-strict"]}
+lint-test = {composite = ["lint", "cov"]}
+
+ptw_ = {cmd = ["ptw", "."]}
+ptw-cov = {cmd = ["ptw", ".", "--runner", "scripts/cov-html.sh"]}
+
+[tool.ruff]
+line-length = 80
+
+# Suggestions to add to select: EM
+[tool.ruff.lint]
+select = [
+	"E",
+	"F",
+	"I",
+	"W",
+	"N",
+	"COM",
+	"C4",
+	"PIE",
+	"T20",
+	"Q",
+	"RET",
+	"SIM",
+	"ARG",
+	"PGH",
+	"RUF",
+]
+ignore = [
+	# https://docs.astral.sh/ruff/formatter/#format-suppression
+	"COM812",
+	"COM819",
+	"E111",
+	"E114",
+	"E117",
+	"D206",
+	"D300",
+	"ISC001",
+	"ISC002",
+	"Q000",
+	"Q001",
+	"Q002",
+	"Q003",
+	"W191",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"
+line-ending = "lf"  # Use `\n` line endings for all files
+
+[tool.ruff.lint.isort]
+case-sensitive = true
+split-on-trailing-comma = false
+
+[tool.ruff.lint.mccabe]
+max-complexity = 6
+
+[tool.mypy]
+strict = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+log_cli = true
+
+[tool.pytest-watcher]
+now = true
+# clear = true
