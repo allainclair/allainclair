@@ -3,5 +3,9 @@ set dotenv-load
 reload := if env_var("ENV") == "prod" { "" } else { "--reload" }
 group_debug := if env_var("ENV") == "prod" { "" } else { "--group debug" }
 
-run-webapp:
+
+build-css:
+	@npm run build:css
+
+run-web:
 	@uv run --no-group dev {{group_debug}} -- uvicorn --host $HOST --port $PORT {{reload}} app.main:app

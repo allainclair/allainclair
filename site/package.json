@@ -1,0 +1,21 @@
+{
+  "name": "Allainclair",
+  "version": "1.0.0",
+  "description": "Allainclair website",
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i app.css -o dist/output.css",
+    "watch:css": "npx @tailwindcss/cli -i app.css -o dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allainclair/allainclair.git"
+  },
+  "author": "Allainclair",
+  "type": "commonjs",
+  "homepage": "https://github.com/allainclair/allainclair#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "daisyui": "^5.0.46",
+    "tailwindcss": "^4.1.11"
+  }
+}

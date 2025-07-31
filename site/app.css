@@ -1,0 +1,12 @@
+@import "tailwindcss" source(none);
+@source "./app/**/*.{py}";
+@plugin "daisyui";
+
+
+.logo-img {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}

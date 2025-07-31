@@ -19,3 +19,10 @@ Webapp.egg-info/
 htmlcov
 
 allainclair_website.egg-info
+
+dist/
+
+node_modules/
+
+package-lock.json
+.sesskey

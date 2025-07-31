@@ -1,8 +1,29 @@
 from monsterui.all import AT, H2, H3, H5, UkIcon, Grid, UkIconLink, CardFooter, DivHStacked, FlexT, DivRAligned, DivLAligned, Card, CardT, CardTitle, DivFullySpaced, Label
-from fasthtml.common import Title, A, Div, Main, Link, Ul, Li, Span, FT
+from fasthtml.common import Title, A, Div, Main, Link, Ul, Li, Span, FT, P, Input, Img
+from uuid import uuid4
 
+def card(title: str, period: str, contents: list[str], techs: list[str], logo_path: str | None = None, opacity: str | None = None, checked: bool = False) -> Div:
+	imgs = [Img(src=logo_path, cls=f"logo-img {opacity}", alt="Martian logo")] if logo_path else []
+	return Div(
+		*imgs,
+		Div(
+			Input(type="checkbox", name=str(uuid4()), checked=checked),
+			Div(
+				H2(title, cls="card-title"),
+				P(period, cls="text-sm text-base-content/70"),
+				cls="collapse-title",
+			),
+			Div(
+				P(*contents),
+				Div(*[Div(tech, cls="badge") for tech in techs], cls="flex flex-wrap gap-2 mt-2"),
+				cls="collapse-content",
+			),
+			cls="collapse collapse-arrow",
+		),
+		cls=f"card bg-base-300 card-md shadow-md",
+	)
 
-def card(
+def card_(
 	body_contents: list[FT],  # Can't type this
 	title_text: str,
 	title_link_text: str,
