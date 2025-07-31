@@ -4,7 +4,9 @@ reload := if env_var("ENV") == "prod" { "" } else { "--reload" }
 group_debug := if env_var("ENV") == "prod" { "" } else { "--group debug" }
 
 
+
 build-css:
+	@npm install
 	@npm run build:css
 
 run-web:

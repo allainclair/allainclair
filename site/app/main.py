@@ -272,10 +272,10 @@ def _header() -> Header:
 			),
 
 			Ul(
-				Li(A(envelope(), cls="tooltip tooltip-bottom", data_tip="Email")),
-				Li(A(linkedin(), cls="tooltip tooltip-bottom", data_tip="LinkedIn")),
-				Li(A(github(), cls="tooltip tooltip-bottom", data_tip="GitHub")),
-				Li(A(whatsapp(), cls="tooltip tooltip-bottom", data_tip="WhatsApp")),
+				Li(A(envelope(), cls="tooltip tooltip-bottom", data_tip="Email", href="mailto:allainclair.com")),
+				Li(A(linkedin(), cls="tooltip tooltip-bottom", data_tip="LinkedIn", href="https://www.linkedin.com/in/allainclair/", target="_blank")),
+				Li(A(github(), cls="tooltip tooltip-bottom", data_tip="GitHub", href="https://github.com/allainclair/", target="_blank")),
+				Li(A(whatsapp(), cls="tooltip tooltip-bottom", data_tip="WhatsApp", href="https://wa.me/5544997191891?text=Olá Allainclair", target="_blank")),
 				cls="menu menu-horizontal",
 			),
 			cls="container mx-auto flex flex-wrap justify-between mt-4 w-11/12",
