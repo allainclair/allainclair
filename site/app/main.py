@@ -1,6 +1,6 @@
 from monsterui.all import Theme, ThemeRadii, fast_app, DividerLine, TextT, Container, NavBar, AT, H2, H5, UkIcon, UkIconLink, DivVStacked, DivRAligned, DivLAligned, Card, CardT, CardTitle, DivFullySpaced, Label, Grid
-from fasthtml.common import Title, A, Div, Main, Link, Ul, Li, Span, Footer, Script, Body, Header, H3, P, Img
-from app.icons import laptop_code, user_tie, graduation_cap, newspaper, blog, envelope, whatsapp, linkedin, github, python, globe
+from fasthtml.common import Title, A, Button, Div, Main, Link, Ul, Li, Span, Footer, Script, Body, Header, H3, P, Img
+from app.icons import laptop_code, user_tie, graduation_cap, newspaper, blog, envelope, whatsapp, linkedin, github, python, globe, file_user
 
 from app.views import card
 from app.content import NECC_CONTENT, TELNYX_CONTENT, MARTIAN_CONTENT, PINTEREST_CONTENT, SEEBOT_CONTENT, EARLYSEC_CONTENT, MASTERS_CONTENT, GRADUATION_CONTENT, PAPER_1, PAPER_2
@@ -210,6 +210,14 @@ async def get():  # type: ignore[no-untyped-def]  # noqa: ANN201
 						["Algoritmos baseados na meta-heurística VNS aplicados ao Problema de Escalonamento de Motoristas de Ônibus: ", A("PDF", href="http://www.din.uem.br/sbpo/sbpo2016/pdf/156702.pdf", cls="link", target="_blank")],
 						[],
 					),
+					card(
+						"17th International Conference on Enterprise Information Systems (ICEIS-2015)",
+						"Jan 2015",
+						["Combining Heuristic and Utility Function for Fair Train Crew Rostering: ",
+						 A("PDF", href="https://www.scitepress.org/PublishedPapers/2015/53645/53645.pdf", cls="link",
+						   target="_blank")],
+						[],
+					),
 					cls=(
 						"grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 "
 						"lg:grid-cols-2 xl:grid-cols-2 gap-4 mt-3"
@@ -223,12 +231,20 @@ async def get():  # type: ignore[no-untyped-def]  # noqa: ANN201
 def _header() -> Header:
 	return Header(
 		Div(
-			A(
-				Div(
-					H2("Allainclair", cls="text-3xl font-bold"),
-					H3("Software Engineer", cls="text-xl"),
-				href="/",
+			Div(
+				A(
+					Div(
+						H2("Allainclair", cls="text-3xl font-bold"),
+						H3("Software Engineer", cls="text-xl"),
+					),
+					href="/",
 				),
+				A(
+					Button(file_user(), cls="btn btn-ghost btn-primary tooltip tooltip-bottom", data_tip="Resume"),
+					href="/app/docs/allainclair-resume.pdf",
+					target="_blank",
+				),
+				cls="flex items-center gap-2",
 			),
 
 			Div(
