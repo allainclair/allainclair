@@ -3,7 +3,7 @@ from fasthtml.common import Title, A, Div, Main, Link, Ul, Li, Span, FT, P, Inpu
 from uuid import uuid4
 
 def card(title: str, period: str, contents: list[str], techs: list[str], logo_path: str | None = None, opacity: str | None = None, checked: bool = False) -> Div:
-	imgs = [Img(src=logo_path, cls=f"logo-img {opacity}", alt="Martian logo")] if logo_path else []
+	imgs = [Img(src=logo_path, cls=f"logo-img {opacity}", alt="Company logo")] if logo_path else []
 	return Div(
 		*imgs,
 		Div(
