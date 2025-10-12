@@ -1,0 +1,5 @@
+# Input:
+python 1_hello_world.py
+
+# Output:
+Hello, world!

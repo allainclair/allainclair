@@ -7,7 +7,7 @@ from time import perf_counter
 async def main() -> None:
 	start = perf_counter()
 	tasks = []
-	for i in range(10):
+	for i in range(5):
 		tasks.append(my_simulated_io_task(i+1))
 
 	results = await gather(*tasks)
@@ -15,15 +15,14 @@ async def main() -> None:
 		if i % 2 == 0:
 			print(result)
 	end = perf_counter()
-	print(f"All tasks completed in {end - start:.3f} seconds.")
+	print(f"All Tasks have been completed in {end - start:.3f} seconds.")
 
 
 async def my_simulated_io_task(id_: int) -> str:
 	wait_time = uniform(1, 5)
-	print(f"I/O task {id_} has started, waiting for {wait_time:.3f} seconds...")
+	print(f"I/O Task {id_} has started, waiting for {wait_time:.3f} seconds...")
 	await sleep(wait_time)
-	print(f"I/O task {id_} has finished!")
-	return f"I/O task {id_} completed after {wait_time:.3f} seconds."
+	return f"I/O Task {id_} has been completed after {wait_time:.3f} seconds."
 
 
 if __name__ == '__main__':

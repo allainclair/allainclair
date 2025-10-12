@@ -10,7 +10,7 @@ async def main() -> None:
 async def my_simulated_io_task(id_: int) -> str:
 	wait_time = uniform(1, 5)
 	await sleep(wait_time)
-	return f"I/O task {id_} completed after {wait_time:.3f} seconds."
+	return f"I/O Task {id_} has been completed after {wait_time:.3f} seconds."
 
 
 if __name__ == '__main__':

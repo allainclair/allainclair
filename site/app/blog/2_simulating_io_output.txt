@@ -1,0 +1,5 @@
+# Input:
+python 3_simulating_io.py
+
+# Output:
+I/O Task 1 has been completed after 4.201 seconds.
