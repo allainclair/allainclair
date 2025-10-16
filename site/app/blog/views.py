@@ -1,4 +1,5 @@
 from fasthtml import APIRouter
+from starlette.requests import Request
 from fasthtml.common import (
 	Div,
 	Span,
@@ -16,6 +17,8 @@ from fasthtml.common import (
 from app.blog.loader import get_blog_post, render_blog_post_content
 from datetime import datetime, UTC
 from timeago import format
+
+from app.language import get_user_language
 from app.views import button_translate, header
 from app.i18n import i18n
 
@@ -71,7 +74,12 @@ async def get(language: str):  # type: ignore[no-untyped-def]  # noqa: ANN201
 
 
 @router("/blog/mastering-async-io-in-python")  # type: ignore[misc]
-async def get(user_language: str):  # type: ignore[no-untyped-def]  # noqa: ANN201
+async def get(
+	req: Request,
+	user_language: str | None = None,
+):  # type: ignore[no-untyped-def]  # noqa: ANN201
+	user_language = get_user_language(req, user_language)
+
 	body_content = await _body_content(
 		user_language,
 		"/blog/mastering-async-io-in-python/body-content",

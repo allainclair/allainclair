@@ -222,7 +222,7 @@ def _body_content(user_language: str, tab_active: str = "professional-experience
 					i18n("2025 - Present", user_language),
 					[
 						i18n("Website that aggregates Brazilian tech influencers: ", user_language),
-						A("tid.dev.br (PT-BR)", cls="link", href="https://tic.dev.br", target="_blank")
+						A("tid.dev.br (pt-BR)", cls="link", href="https://tic.dev.br", target="_blank")
 					],
 					["Python", "HTMX", "FastHTML", "DaisyUI"],
 				),
