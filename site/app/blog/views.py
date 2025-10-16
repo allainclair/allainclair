@@ -33,7 +33,12 @@ CODE_BASE_COLOR_50 = "text-base-content/50"
 
 
 @router("/blog")
-async def blog(user_language: str):
+async def blog(
+	req: Request,
+	user_language: str | None = None,
+):
+	user_language = get_user_language(req, user_language)
+
 	body_content = await _body_content(
 		user_language,
 	),
