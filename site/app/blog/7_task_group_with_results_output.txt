@@ -1,5 +1,5 @@
 # Input:
-python 7_task_group_with_results.py
+python task_group_with_results.py
 
 # Output:
 I/O Task 1 has started, waiting for 3.209 seconds...

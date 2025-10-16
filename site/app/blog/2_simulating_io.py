@@ -13,5 +13,5 @@ async def my_simulated_io_task(id_: int) -> str:
 	return f"I/O Task {id_} has been completed after {wait_time:.3f} seconds."
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 	run(main())

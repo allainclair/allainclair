@@ -8,7 +8,7 @@ async def main() -> None:
 	start = perf_counter()
 	tasks = []
 	for i in range(5):
-		tasks.append(my_simulated_io_task(i+1))
+		tasks.append(my_simulated_io_task(i + 1))
 
 	results = await gather(*tasks)
 	for i, result in enumerate(results, start=1):
@@ -25,5 +25,5 @@ async def my_simulated_io_task(id_: int) -> str:
 	return f"I/O Task {id_} has been completed after {wait_time:.3f} seconds."
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 	run(main())

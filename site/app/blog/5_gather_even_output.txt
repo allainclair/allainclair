@@ -1,5 +1,5 @@
 # Input:
-python 5_gather_even.py
+python gather_even.py
 
 # Output:
 I/O Task 1 has started, waiting for 4.324 seconds...

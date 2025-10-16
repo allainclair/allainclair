@@ -1,5 +1,5 @@
 # Input:
-python 3_sync_calls.py
+python sync_calls.py
 
 # Output:
 I/O Task 1 has been completed after 2.296 seconds.

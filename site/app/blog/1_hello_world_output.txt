@@ -1,5 +1,5 @@
 # Input:
-python 1_hello_world.py
+python hello_world.py
 
 # Output:
 Hello, world!

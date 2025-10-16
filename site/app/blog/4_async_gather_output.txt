@@ -1,5 +1,5 @@
 # Input:
-python 4_async_gather.py
+python async_gather.py
 
 # Output:
 I/O Task 1 has started, waiting for 2.222 seconds...

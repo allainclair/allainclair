@@ -19,7 +19,7 @@ TRANSLATIONS = {
 
 	"Backend Software Engineer at Telnyx": "Engenheiro de Software Backend em Telnyx",
 	"Jan 2025 - Present (less 1 than yr)": "Jan 2025 - Presente (menos de 1 ano)",
-	"• Enabled our customers to monitor and manage thousands of messages daily.": "• Permiti que nossos clientes monitorassem e gerenciassem milhares de mensagens diariamente.",
+	"• Enabled our customers to monitor and manage thousands of SMS messages daily.": "• Permiti que nossos clientes monitorassem e gerenciassem milhares de mensagens diariamente.",
 	"• Worked on about 8 microservices, designing, developing, and maintaining about 24 HTTP endpoints.": "• Trabalhei em cerca de 8 microsserviços, projetando, desenvolvendo e mantendo cerca de 24 rotas HTTP.",
 
 	"Software Engineer at New England Center for Children": "Engenheiro de Software em New England Center for Children",
@@ -83,7 +83,22 @@ TRANSLATIONS = {
 	"May 2017": "Maio 2017",
 	"Sep 2016": "Set 2016",
 
-
+	# Blog
+	"Mastering Async IO in Python": "Domine Async IO em Python",
+	"Mastering Async IO in Python: Practical Examples That Boost Performance": "Domine Async IO em Python: Exemplos Práticos que Aumentam o Desempenho",
+	"Published ": "Publicado ",
+	"by Allainclair": "por Allainclair",
+	"In short:": "Em resumo:",
+	" we are going to see how to write ": " vamos ver como escrever código ",
+	" code in Python with examples, focused on reducing running time and providing code alternatives. Let's start from the simple and then go more complex.": " em Python com exemplos, focado em reduzir o tempo de execução e fornecer alternativas de código. Vamos começar do simples e depois ir para o mais complexo.",
+	"Quick links:": "Links rápidos:",
+	"Simulating IO with sleep()": "Simulando IO com sleep()",
+	"Sync calls with Async IO functions": "Chamadas síncronas com funções Async IO",
+	"Async calls with Async IO functions using gather()": "Chamadas assíncronas com funções Async IO usando gather()",
+	"Async calls with results that need to be modified": "Chamadas assíncronas com resultados que precisam ser modificados",
+	"Async calls with Async IO functions using TaskGroup": "Chamadas assíncronas com funções Async IO usando TaskGroup",
+	"TaskGroup with variable binding": "TaskGroup com vinculação de variáveis",
+	"Considerations": "Considerações",
 
 	}
 
