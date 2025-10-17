@@ -11,10 +11,11 @@ def get_user_language(req: Request, user_language: str | None) -> str:
 	if user_language is not None:
 		return user_language
 
-	if not req.headers["Accept-Language"]:
+	accept_language = req.headers.get("Accept-Language", "")
+	if not accept_language:
 		return "en"
 
-	languages = [lang.split(';')[0].strip() for lang in req.headers["Accept-Language"].split(',')]
+	languages = [lang.split(';')[0].strip() for lang in accept_language.split(',')]
 	for lang in languages:
 		if "pt" in lang.lower():
 			return "pt"
