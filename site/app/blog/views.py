@@ -13,6 +13,8 @@ from fasthtml.common import (
 	Li,
 	Title,
 	Body,
+	Style,
+	NotStr,
 )
 from app.blog.loader import get_blog_post, render_blog_post_content
 from datetime import datetime, UTC
@@ -21,6 +23,7 @@ from timeago import format
 from app.language import get_user_language
 from app.views import button_translate, header
 from app.i18n import i18n
+from app.markdown_converter import get_pygments_css
 
 router = APIRouter()
 
@@ -134,12 +137,17 @@ def _main_content(
 	blog_contents: list[Div],
 	breadcrumbs_li_name: str | None = None,
 	breadcrumbs_li_path: str | None = None,
-) -> Div:
-	return Div(
-		_blog_breadcrumbs(breadcrumbs_li_name, breadcrumbs_li_path),
-		*blog_contents,
-		id="main-content",
-		cls="container mx-auto gap-4 mt-4 w-11/12",
+) -> tuple[Style, Div]:
+	# Get Pygments CSS for syntax highlighting
+	pygments_css = get_pygments_css('github-dark')
+	return (
+		Style(NotStr(pygments_css)),
+		Div(
+			_blog_breadcrumbs(breadcrumbs_li_name, breadcrumbs_li_path),
+			*blog_contents,
+			id="main-content",
+			cls="container mx-auto gap-4 mt-4 w-11/12",
+		)
 	)
 
 

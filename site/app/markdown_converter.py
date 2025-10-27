@@ -1,9 +1,12 @@
 from markdown_it import MarkdownIt
 from markdown_it.token import Token
 from markdown_it.renderer import RendererHTML
-from markdown_it.common.utils import escapeHtml
 from mdit_py_plugins.anchors import anchors_plugin
 from fasthtml.common import Div, NotStr
+from pygments import highlight
+from pygments.lexers import get_lexer_by_name, guess_lexer
+from pygments.formatters import HtmlFormatter
+from pygments.util import ClassNotFound
 
 HEADING_CLASSES = {
 	"h1": "text-4xl font-bold text-primary mb-4",
@@ -32,17 +35,34 @@ class DaisyUIRenderer(RendererHTML):
 
 	def fence(self, tokens, idx, options, env):
 		token = tokens[idx]
-		lang = token.info or ''
+		lang = token.info.strip() if token.info else ''
 		code = token.content
 
-		# Return as daisyUI mockup-code
-		lines = code.rstrip('\n').split('\n')
-		code_lines = []
-		for i, line in enumerate(lines, 1):
-			escaped = escapeHtml(line) if line else ""
-			code_lines.append(f'  <pre data-prefix="{i}"><code>{escaped}</code></pre>')
+		# Try to get the appropriate lexer for syntax highlighting
+		try:
+			if lang:
+				lexer = get_lexer_by_name(lang, stripall=True)
+			else:
+				lexer = guess_lexer(code)
+		except ClassNotFound:
+			# If no lexer found, fall back to plain text
+			lexer = get_lexer_by_name('text', stripall=True)
 
-		return f'<div class="mockup-code w-full mt-4">\n' + '\n'.join(code_lines) + '\n</div>'
+		# Use Pygments to highlight the code with line numbers
+		formatter = HtmlFormatter(
+			cssclass='highlight',
+			style='github-dark',
+			noclasses=False,
+			nowrap=False,
+			linenos='table',  # Use inline format to avoid extra spacing issues with table
+			linenostart=1,
+			linenoseparator='=',  # Two spaces between line number and code
+		)
+		highlighted = highlight(code, lexer, formatter)
+
+		# Return the highlighted code without daisyUI mockup-code wrapper
+		# to avoid ::before pseudo-element conflicts
+		return f'<div class="w-full mt-4 rounded-md overflow-x-auto">\n{highlighted}\n</div>'
 
 	def link_open(self, tokens, idx, options, env):
 		token = tokens[idx]
@@ -114,3 +134,19 @@ def md_to_fasthtml(md_content: str):
 	"""
 	html = md_to_html(md_content)
 	return Div(NotStr(html))
+
+
+def get_pygments_css(style: str = 'monokai') -> str:
+	"""
+	Get Pygments CSS for syntax highlighting
+
+	Args:
+		style: Pygments style name (default: 'monokai')
+
+	Returns:
+		CSS string for syntax highlighting
+	"""
+	formatter = HtmlFormatter(style=style)
+	style_highlight_table = formatter.get_style_defs('.highlighttable')
+	style_highlight_table += "\n.highlighttable td { padding: 10px; }"
+	return formatter.get_style_defs('.highlight') + style_highlight_table
