@@ -1,7 +1,7 @@
 Hi, I’m Allainclair, a software engineer from Brazil <img src="https://cdn-icons-png.flaticon.com/512/3909/3909370.png" width="14"/> with more than 10 years of experience.
 - Most of my experience is in backend web apps, but I can make some front-ends, too.
 - My website is [allainclair.com](https://allainclair.com)
-- Some personal projects: [akingressos.com.br](https://akingressos.com.br), [tic.dev.br](https://tic.dev.br)
+- Some personal projects: [mapimb.com.br](https://mapimb.com.br)
 - I’m interested in Software Engineering, Data Science, Optimization, and Python.
 - I’m currently studying systems design and architecture, HTMX, and [FastHTML](https://fastht.ml).
 - I’m looking to collaborate on Python projects.
